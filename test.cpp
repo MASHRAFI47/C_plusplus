@@ -1,30 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+class Student {
+    public:
+    char name[100];
+    double gpa;
+    int roll;
+};
+
 int main() {
-    int n;
-    cin >> n;
-    int *arr = new int[n];
+    Student a, b;
+    cin.getline(a.name, 100);
+    cin >> a.roll >> a.gpa;
+    cin.ignore();
 
-    for(int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
-
-    int m;
-    cin >> m;
-    int *arr2 = new int(m);
-
-    for(int i = 5; i < 10; i++) {
-        cin >> arr2[i];
-    }
-
-    for(int i = 0; i < n; i++) {
-        arr2[i] = arr[i];
-    }
-
-    for(int i = 0; i < m; i++) {
-        cout << arr2[i] << " ";
-    }
+    cout << a.name << " " << a.roll << " " << fixed << setprecision(2) << a.gpa << endl;
 
     return 0;
 }
