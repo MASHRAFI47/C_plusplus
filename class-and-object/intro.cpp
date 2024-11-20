@@ -2,18 +2,19 @@
 using namespace std;
 
 class Student {
-    public: 
+    public:
     char name[100];
-    int roll;
     double gpa;
+    int roll;
 };
 
 int main() {
-    Student a;
-    a.roll = 51;
-    a.gpa = 5.00;
-    char temp[100] = "Mashrafi";
-    strcpy(a.name, temp);
+    Student a, b;
+    cin.getline(a.name, 100);
+    cin >> a.roll >> a.gpa;
+    cin.ignore();
+
+    cout << a.name << " " << a.roll << " " << fixed << setprecision(2) << a.gpa << endl;
 
     return 0;
 }
