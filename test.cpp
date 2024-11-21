@@ -1,19 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+class Student {
+    public: 
+    char name[1000];
+    int roll;
+    char section;
+    int mathMarks;
+    int cls;
+
+    Student(char name[1000], int roll, int section, int mathMarks, int cls) {
+
+    }
+};
+
 int main() {
-    int n;
-    cin >> n;
+    Student rakib("Mashrafi Bin Nur", 51, 'A', 100, 5);
 
-    int arr[n];
-    for(int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
-
-    sort(arr, arr+n);
-
-    for(int i = 0; i < n; i++) {
-        cout << arr[i] << " ";
-    }
     return 0;
 }
