@@ -5,44 +5,37 @@ int main() {
     int n;
     cin >> n;
 
-    for(int i = 0; i < n; i++){
-        char str[1000], str2[1000];
+    for(int i = 0; i < n; i++) {
+        char str[1001], str2[1001];
         cin >> str >> str2;
 
-        bool isPermute = true;
+        bool anagram = true;
 
-        int firstStrLen = strlen(str);
-        int secondStrLen = strlen(str2);
+        int firstLen = strlen(str);
+        int secondLen = strlen(str2);
 
-        if(firstStrLen != secondStrLen) {
-            isPermute = false;
+        sort(str, str+firstLen);
+        sort(str2, str2+secondLen);
+
+        if(firstLen != secondLen) {
+            anagram = false;
         }
-
         else {
-            for(int i = 0; i < firstStrLen; i++) {
-                for(int j = 0; j < firstStrLen; j++) {
-                    if(str[i] == str2[j]) {
-                        isPermute = true;
-                        break;
-                    }
-                    else {
-                        isPermute = false;
-                        break;
-                    }
-
-                    // cout << str[i] << " " << str2[j] << endl;
+            for(int i = 0; i < firstLen; i++) {
+                if(str[i] != str2[i]) {
+                    anagram = false;
+                    break;
                 }
             }
         }
 
-
-        if(isPermute) {
+        if(anagram) {
             cout << "True" << endl;
         }
         else {
             cout << "False" << endl;
         }
-        
     }
+
     return 0;
 }
