@@ -86,6 +86,7 @@
         "thread": "cpp",
         "typeindex": "cpp",
         "unordered_set": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "__memory": "cpp"
     }
 }
