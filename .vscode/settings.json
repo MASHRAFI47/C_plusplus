@@ -88,5 +88,6 @@
         "unordered_set": "cpp",
         "valarray": "cpp",
         "__memory": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "enabled"
 }
